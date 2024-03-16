@@ -1,6 +1,5 @@
 function searchCity() {
     var userInput = document.getElementById("userCity").value;
-
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -13,10 +12,10 @@ function searchCity() {
         }
     };
 
-    xhr.open("POST", "search_city.php", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.send("userCity=" + userInput);
+    xhr.open("GET", "crashs.php?lieu=" + encodeURIComponent(userInput), true);
+    xhr.send();
 }
+
 
 function filterData(type) {
     var xhr = new XMLHttpRequest();
