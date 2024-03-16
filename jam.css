@@ -7,7 +7,7 @@ body {
 
 .container {
     width: 90%;
-    margin: 500px auto;
+    margin: 200px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -64,8 +64,8 @@ h2 {
 }
 
 #result {
-    display: flex; /* Utilise Flexbox pour centrer les enfants */
-    justify-content: center; /* Centre horizontalement le contenu */
+    display: flex;
+    justify-content: center;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;

@@ -2,7 +2,7 @@
 
 function getCrashs($place) {
     $placeEncode = urlencode($place);
-    $url = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/accidents-corporels-de-la-circulation-millesime/records?select=*&where=nom_com%20like%20%22" . $placeEncode . "%22&limit=100&lang=fr";
+    $url = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/accidents-corporels-de-la-circulation-millesime/records?select=*&where=nom_com%20like%20%22" . $placeEncode . "%22&order_by=an%20DESC%2C%20mois%20DESC%2C%20jour%20DESC%2C%20hrmn%20DESC&limit=100&lang=fr";
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
