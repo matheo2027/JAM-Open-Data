@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search about city</title>
+    <link rel="stylesheet" type="text/css" href="jam.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Recherche</h2>
+        <div class="input-container">
+            <label for="userCity">Entrez votre ville :</label>
+            <input type="text" id="userCity" name="userCity">
+            <button type="button" onclick="searchCity()">Rechercher</button>
+        </div>
+
+        <div class="filter-container">
+            <button onclick="filterData('defibrillators')">Défibrillateurs</button>
+            <button onclick="filterData('accidents')">Accidents</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="jam.js"></script>
+</body>
+</html>
