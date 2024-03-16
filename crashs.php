@@ -2,7 +2,7 @@
 
 function getCrashs($place) {
     $placeEncode = urlencode($place);
-    $url = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/accidents-corporels-de-la-circulation-millesime/records?select=*&where=nom_com%20like%20%22" . $placeEncode . "%22&limit=10&lang=fr";
+    $url = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/accidents-corporels-de-la-circulation-millesime/records?select=*&where=nom_com%20like%20%22" . $placeEncode . "%22&limit=100&lang=fr";
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -22,7 +22,6 @@ function crashsFilter($crashs) {
     foreach ($crashs['results'] as $record) {
         $filtered_crashes[] = [
             "num_accident" => $record['num_acc'] ?? 'N/A',
-            "date" => $record['datetime'] ?? 'N/A',
             "Ville" => $record['nom_com'] ?? 'N/A',
             "année" => $record['an'] ?? 'N/A',
             "mois" => $record['mois'] ?? 'N/A',

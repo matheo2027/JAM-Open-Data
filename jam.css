@@ -6,13 +6,15 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    width: 90%;
+    margin: 500px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
 }
+
 
 h2 {
     text-align: center;
@@ -62,8 +64,27 @@ h2 {
 }
 
 #result {
+    display: flex; /* Utilise Flexbox pour centrer les enfants */
+    justify-content: center; /* Centre horizontalement le contenu */
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    text-align: center;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
 }
