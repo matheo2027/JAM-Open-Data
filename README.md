@@ -20,8 +20,6 @@ A little intro about the installation.
 ```
 $ git clone git@github.com:matheo2027/JAM-Open-Data.git
 $ cd ./JAM-Open-Data
-
-(ALT+l ALT+o)
 ```
 ## Overview
 ***
