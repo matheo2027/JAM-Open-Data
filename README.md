@@ -26,4 +26,4 @@ $ cd ./JAM-Open-Data
 ## Overview
 ***
 
-* [JAM_OPEN_DATA.png]
+![Screenshot](JAM_OPEN_DATA.png)
